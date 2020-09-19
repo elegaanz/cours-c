@@ -1,0 +1,159 @@
+$black: #404040;
+$white: white;
+$blue: #f08807; // yes that's not blue at all
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body > * {
+    padding-left: 20vw;
+    padding-right: 20vw;
+}
+
+a, a:visited {
+    color: $blue;
+    text-decoration: none;
+}
+
+header {
+    background: $black;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+
+    a, a:visited {
+        color: $white;
+    }
+}
+
+.illus {
+    min-height: 30vh;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    min-height: 80vh;
+    padding: 5em 20vw;
+}
+
+footer {
+    min-height: 20vh;
+    background: $black;
+    padding: 5em 20vw;
+    text-align: center;
+    color: $white;
+
+    a, a:visited {
+        color: $white;
+        text-decoration: underline;
+    }
+}
+
+main > nav {
+    display: flex;
+
+    a {
+        display: block;
+        padding: 1em;
+        flex: 1;
+        transition: background 0.1s ease-in;
+
+        &:hover {
+            background: transparentize($black, 0.8);
+        }
+
+        &:last-of-type {
+            text-align: right;
+        }
+    }
+}
+
+pre {
+    padding: 1em;
+    overflow-x: auto;
+}
+
+*:not(pre) > code {
+    background: transparentize(#122b3b, 0.90);
+    padding: 0.2em 0.4em;
+}
+
+table {
+    margin: 2em auto;
+    border-collapse: collapse;
+}
+
+td, th:not(:empty) {
+    padding: 1em;
+    border: 1px solid $black;
+}
+
+.toc {
+    list-style-type: upper-roman;
+    font-size: 1.5em;
+    li {
+        padding: 0.5em;
+    }
+}
+
+ol {
+    padding-left: 1em;
+}
+
+main img {
+    display: block;
+    margin: 2em auto;
+    max-height: 50vh;
+    max-width: 90vw;
+}
+
+@media screen and (max-width: 720px) {
+    body > * {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    main {
+        padding: 1em 5vw;
+    }
+}
+
+summary {
+    cursor: pointer;
+}
+
+.quizz {
+    border-left: 3px solid $black;
+    padding-left: 2em;
+    margin: 0px 0px 3em;
+
+    pre {
+        margin-bottom: 0px
+    }
+
+    input {
+        border: 1px solid $black;
+        margin: 0px 0px 1em;
+        padding: 0.5em;
+        width: calc(100% - 1em - 2px);
+
+        &.code {
+            font-family: monospace;
+        }
+
+        &:valid {
+            border-color: green;
+            background: transparentize(green, 0.8);
+        }
+
+        &:invalid {
+            outline: none;
+            border-color: red;
+            background: transparentize(red, 0.8);
+        }
+    }
+}

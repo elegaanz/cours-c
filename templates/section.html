@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ section.content | safe }}
+
+    <ol class="toc">
+    {% for chap in section.pages %}
+        <li>
+            <a href="{{ chap.permalink }}">{{ chap.title }}</a>
+            <p>{{ chap.description }}</p>
+        </li>
+    {% endfor %}
+    </ol>
+
+{% endblock content %}
+

@@ -67,7 +67,7 @@ Et qu'on exécute `make trois`, Make va voir que `trois` a besoin de `deux`
 d'abord, et que deux a besoin de `un`. Il va donc exécuter `un`, puis `deux`,
 puis `trois`, et on verra :
 
-```bash
+```
 Règle un !
 Règle deux !
 Règle trois !

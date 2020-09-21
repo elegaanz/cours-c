@@ -1,6 +1,6 @@
-$black: #404040;
+$black: var(--background);
 $white: white;
-$blue: #f08807; // yes that's not blue at all
+$blue: var(--primary); // yes that's not blue at all
 
 html, body {
     margin: 0px;
@@ -63,7 +63,7 @@ main > nav {
         transition: background 0.1s ease-in;
 
         &:hover {
-            background: transparentize($black, 0.8);
+            background: rgba(0, 0, 0, 0.2);
         }
 
         &:last-of-type {
@@ -78,7 +78,7 @@ pre {
 }
 
 *:not(pre) > code {
-    background: transparentize(#122b3b, 0.90);
+    background: transparentize(#000, 0.90);
     padding: 0.2em 0.4em;
 }
 

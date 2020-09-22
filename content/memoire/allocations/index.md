@@ -54,12 +54,12 @@ où on veut dans le tas tant qu'il y a de la place, on peut demander à tout mom
 chercher et de réserver un emplacement d'une taille arbitraire.
 
 Pour réserver de l'espace sur le tas, on utilise la fonction `malloc` (« _**m**emory **alloc**_ », allocation de mémoire).
-Elle prend en paramètre le nombre de bits dont on aura besoin sur le tas,
+Elle prend en paramètre le nombre d'octets dont on aura besoin sur le tas,
 et renvoie un pointeur vers l'emplacement du tas où on pourra écrire
 nos données. Cette fonction viens de `stdlib.h`, il ne faudra donc pas
 oublier de l'inclure.
 
-Par exemple, on peut réserver 4 bits, et écrire `"yo"` dedans :
+Par exemple, on peut réserver 4 octets, et écrire `"yo"` dedans :
 
 ```c
 #include <stdlib.h>

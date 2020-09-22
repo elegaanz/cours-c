@@ -12,6 +12,9 @@ illus = "/woodenc.webp"
 jsonld = true
 +++
 
+**Ce cours est en construction, certaines choses vont sans doute évoluer, certaines pages peuvent être
+absentes ou incomplètes.**
+
 **Note importante :** il est conseillé de tester les exemples de code au fur et à mesure,
 et de bien les comprendre avant de passer à la suite. Créer vos propres exemples aide aussi beaucoup à assimiler
 les nouvelles notions.

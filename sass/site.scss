@@ -97,6 +97,9 @@ td, th:not(:empty) {
     font-size: 1.5em;
     li {
         padding: 0.5em;
+        & > p {
+            font-size: 0.75em;
+        }
     }
 }
 

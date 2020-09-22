@@ -1,6 +1,6 @@
 +++
 title = "Compiler à la main"
-description = "Comment utiliser Clang pour compiler un programme en C."
+description = "Ce chaptire explique comment utiliser Clang pour compiler un programme en C."
 weight = 2
 
 [extra]

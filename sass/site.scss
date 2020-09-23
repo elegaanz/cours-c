@@ -1,11 +1,49 @@
-$black: var(--background);
-$white: white;
-$blue: var(--primary); // yes that's not blue at all
+* { 
+    --white: #F6F7EB;
+    --black: #37000A;
+}
+
+$primary: var(--primary); // yes that's not blue at all
+$accent: var(--accent);
+
+@media (prefers-color-scheme: dark) {
+    * {
+        --foreground: var(--white);
+        --background: var(--black);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    * {
+        --foreground: var(--black);
+        --background: var(--white);
+    }
+
+    body.dark, body.dark * {
+        --foreground: var(--white);
+        --background: var(--black);
+    }
+}
+
+$background: var(--background);
+$foreground: var(--foreground);
+
+.theme-switch {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    background: var(--foreground);
+    color: var(--background);
+    display: block;
+    padding: 0.5em;
+}
 
 html, body {
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
+    background: var(--background);
+    color: var(--foreground);
 }
 
 body > * {
@@ -14,18 +52,18 @@ body > * {
 }
 
 a, a:visited {
-    color: $blue;
+    color: $primary;
     text-decoration: none;
 }
 
 header {
-    background: $black;
-    color: $white;
+    background: $accent;
+    color: var(--white);
     display: flex;
     justify-content: space-between;
 
     a, a:visited {
-        color: $white;
+        color: var(--white);
     }
 }
 
@@ -42,13 +80,13 @@ main {
 
 footer {
     min-height: 20vh;
-    background: $black;
+    background: $accent;
     padding: 5em 20vw;
     text-align: center;
-    color: $white;
+    color: var(--white);
 
     a, a:visited {
-        color: $white;
+        color: var(--white);
         text-decoration: underline;
     }
 }
@@ -89,7 +127,7 @@ table {
 
 td, th:not(:empty) {
     padding: 1em;
-    border: 1px solid $black;
+    border: 1px solid $accent;
 }
 
 .toc {
@@ -130,7 +168,7 @@ summary {
 }
 
 .quizz {
-    border-left: 3px solid $black;
+    border-left: 3px solid $accent;
     padding-left: 2em;
     margin: 0px 0px 3em;
 
@@ -139,7 +177,7 @@ summary {
     }
 
     input {
-        border: 1px solid $black;
+        border: 1px solid $accent;
         margin: 0px 0px 1em;
         padding: 0.5em;
         width: calc(100% - 1em - 2px);

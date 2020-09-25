@@ -103,3 +103,54 @@ termine pour « fermer » le fichier. Ce n'est pas très grave quand on écrit d
 courts comme ici, mais si on en fait qui tournent pendant plus longtemps, ça peut poser problème.
 
 Bien-ŝur, une fois qu'on a fermé un fichier, on n'a plus le droit de lire ou d'écrire dedans.
+
+## Bonus : le terminal est un fichier
+
+Les système d'exploitation UNIX ont une sorte d'obcession
+avec les fichiers, et ils ont tendance à tout voir comme des
+fichiers : votre processeur est un fichier, une connexion vers
+un site internet est un fichier, etc.
+
+Et l'entrée et la sortie standard (en gros : le terminal et le clavier)
+des programmes sont aussi des fichiers ! C'est très pratique, parce
+qu'on peut écrire des programmes « indépendants » d'un nom de fichier.
+
+Pour utiliser ces fichiers spéciaux, on n'utilise pas `fopen`, mais
+les constantes spéciales `stdin` (**st**an**d**ard **in**put, « entrée standard », le clavier)
+et `stdout` (**st**an**d**ard **out**put, « sortie standard », le texte du terminal).
+Ces constantes viennent aussi de `stdio.h`.
+
+Ce programme par exemple ouvre un fichier si on en précise un dans ses
+arguments, sinon il utilise la sortie standard.
+
+```c
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+    // On essaie d'ouvrir le fichier si il a été précisé en argument
+    FILE *fichier = NULL;
+    if (argc > 1) {
+        fichier = fopen(argv[1], "r");
+    }
+    
+    // Si l'ouverture a raté ou s'il n'y avait juste pas d'argument,
+    // on utilise stdin
+    if (fichier == NULL) {
+        fichier = stdin;
+    }
+
+    // On affiche le contenu du fichier
+    // Si le fichier est stdin, ça va juste répéter
+    // ce qu'on tape jusqu'à ce qu'on fasse Ctrl+D ou Ctrl+C.
+    // On considère que le fichier ne contient que des nombres les uns
+    // à la suite des autres.
+    while(!feof(fichier)) {
+        int x = 0;
+        scanf(fichier, "%d", &x);
+
+        printf("%d\n", x);
+    }
+
+    return 0;
+}
+```

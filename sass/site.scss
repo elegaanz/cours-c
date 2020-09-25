@@ -11,6 +11,11 @@ $accent: var(--accent);
         --foreground: var(--white);
         --background: var(--black);
     }
+
+    body.light, body.light * {
+        --foreground: var(--black);
+        --background: var(--white);
+    }
 }
 
 @media (prefers-color-scheme: light) {

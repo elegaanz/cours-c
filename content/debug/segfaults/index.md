@@ -1,6 +1,10 @@
 +++
 title = "Choses à vérifier en cas d'erreur de segmentation"
 weight = 2
+description = "Les erreurs de segmentation sont très courantes en C, mais leurs causes sont souvent les mêmes."
+
+[extra]
+illus = "illus.webp"
 +++
 
 Les erreurs de segmentations sont sans doute un des bugs les plus courants

@@ -1,6 +1,7 @@
 +++
 title = "Les pointeurs"
 weight = 2
+description = "Le concept de pointeur est très important en C, et permet de gérer la mémoire de manière efficace. Ici, on explique à quoi ils servent et comment les utiliser."
 
 [extra]
 illus = "illus.webp"

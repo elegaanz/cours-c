@@ -1,6 +1,7 @@
 +++
 title = "Stocker des variables"
 weight = 1
+description = "Ce chapitre explique comment sont stockées les variables en C, en expliquant le concept de pile."
 
 [extra]
 illus = "illus.webp"

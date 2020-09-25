@@ -1,6 +1,10 @@
 +++
 title = "Utiliser GDB"
 weight = 1
+description = "GDB est un débogueur, un outil très utile pour trouver et corriger des bugs."
+
+[extra]
+illus = "illus.webp"
 +++
 
 GDB (**G**NU **d**e**b**buger) est une commande très utile pour analyser

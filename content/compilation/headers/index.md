@@ -1,6 +1,10 @@
 +++
 title = "Travailler avec plusieurs fichiers"
+description = "Ce chapitre explique comment séparer son code C en plusieurs fichiers pour mieux organiser ses projets."
 weight = 4
+
+[extra]
+illus = "illus.webp"
 +++
 
 Il est souvent utile de diviser son code en plusieurs fichiers,

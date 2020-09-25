@@ -1,6 +1,10 @@
 +++
 title = "Lire et écrire dans des chaînes"
 weight = 3
+description = "Ce chapitre explique comment lire et écrire dans des chaînes de caractères."
+
+[extra]
+illus = "illus.webp"
 +++
 
 Il existe aussi des fonctions pour faire des `printf` et des `scanf`

@@ -1,6 +1,7 @@
 +++
 title = "Exercices"
 weight = 5
+description = "Une série d'exercices pour s'entraîner sur les concepts liés à la mémoire en C."
 +++
 
 ## 1 - Comprendre la pile

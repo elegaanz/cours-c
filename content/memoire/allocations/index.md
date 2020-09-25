@@ -1,6 +1,7 @@
 +++
 title = "Les allocations dynamiques"
 weight = 4
+description = "Il est parfois utile de pouvoir allouer de la mémoire au moment de l'exécution du programme. C'est ce que permet la fonctionc malloc."
 
 [extra]
 illus = "illus.webp"

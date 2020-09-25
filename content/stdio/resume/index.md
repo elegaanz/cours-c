@@ -1,6 +1,7 @@
 +++
 title = "Résumé"
 weight = 4
+description = "Un résumé des différentes fonctions de stdio."
 +++
 
 On peut résumer les différentes fonctions de `stdio` ainsi :

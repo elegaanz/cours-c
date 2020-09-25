@@ -1,6 +1,7 @@
 +++
 title = "Les tableaux"
 weight = 3
+description = "Pour stocker une suite de variables du même type en C on peut utiliser les tableaux."
 
 [extra]
 illus = "illus.webp"

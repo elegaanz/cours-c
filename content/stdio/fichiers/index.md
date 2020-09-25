@@ -1,6 +1,6 @@
 +++
 title = "Lire et écrire des fichiers"
-description = ""
+description = "Les fichiers permettent de conserver des données sur le disque dur, et donc de les sauvegarder même après la fin d'un programme. Ce chapitre explique comment les lire et les écrire en C."
 weight = 2
 
 [extra]

@@ -128,7 +128,7 @@ short y = x + 3;
 ```
 
 On fait notre job de processeur et on calcule `x + 3`. Pour ça il faut
-d'abord aller lire la valeur de `x`. On se souvient qu'il va du bit 0 au bit 32
+d'abord aller lire la valeur de `x`. On se souvient qu'il va du bit 0 au bit 15
 de la pile, donc pas de souci. Maintenant on fait le calcul et on ajoute le résultat
 sur la pile.
 

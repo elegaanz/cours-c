@@ -78,7 +78,7 @@ int main() {
     }
 
     char c = ' ';
-    while (feof(fichier)) { // Tant qu'on est pas à la fin
+    while (!feof(fichier)) { // Tant qu'on est pas à la fin
         // On lit caractère par caractère
         fscanf(fichier, "%c", c);
 
